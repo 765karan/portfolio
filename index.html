@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karan Singh | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d1117;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: sticky; top: 0; background: rgba(0,0,0,0.7);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; z-index: 1000; backdrop-filter: blur(10px);
+    }
+    .logo {display:flex; flex-direction:column;}
+    .logo h2 {margin:0; color:#00f5d4;}
+    .logo a {
+      font-size:0.9rem; color:#ccc; text-decoration:none;
+      transition: color 0.3s;
+    }
+    .logo a:hover {color:#00f5d4;}
+    header nav a {
+      color: #fff; margin: 0 1rem; text-decoration: none; font-weight: 600;
+      transition: color 0.3s;
+    }
+    header nav a:hover {color:#00f5d4;}
+
+    /* Hero */
+    .hero {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;}
+    .hero h1 {font-size:3rem;}
+    .typed {color:#00f5d4; font-weight:700;}
+
+    section {padding:5rem 10%;}
+    h2 {text-align:center; margin-bottom:2rem; font-size:2rem; color:#00f5d4;}
+
+    /* Projects */
+    .projects-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;
+    }
+    .card {
+      background:rgba(255,255,255,0.05); border-radius:15px; padding:2rem;
+      text-align:center; transition:0.3s;
+    }
+    .card:hover {transform:translateY(-10px); background:rgba(255,255,255,0.1);}
+    .btn {
+      display:inline-block; margin-top:1rem; padding:0.6rem 1.2rem; border-radius:25px;
+      background:#00f5d4; color:#000; text-decoration:none; font-weight:600;
+      transition:0.3s;
+    }
+    .btn:hover {background:#02c39a;}
+
+    /* Resume Modal */
+    .modal {
+      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.85); justify-content:center; align-items:center;
+      z-index:2000;
+    }
+    .modal-content {
+      background:#111; padding:1rem; border-radius:10px;
+      max-width:85%; max-height:85%; animation:fadeIn .5s;
+    }
+    .modal iframe {width:100%; height:70vh; border:none;}
+    .close {float:right; font-size:2rem; cursor:pointer; color:#00f5d4;}
+    @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+
+    /* Contact */
+    .contact form {max-width:600px; margin:auto; display:flex; flex-direction:column;}
+    .contact input,.contact textarea {
+      padding:0.8rem; margin:0.5rem 0; border:none; border-radius:10px;
+    }
+    .contact button {
+      padding:0.8rem; border:none; border-radius:25px; background:#00f5d4;
+      font-weight:600; cursor:pointer; transition:0.3s;
+    }
+    .contact button:hover {background:#02c39a;}
+
+    footer {text-align:center; padding:2rem; background:rgba(0,0,0,0.5);}
+    /* Particle canvas */
+    #particles-js {position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
+  </style>
+</head>
+<body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="logo">
+      <h2>Karan Singh</h2>
+      <p>karanh_cse23@gmail.com</p>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hi, I'm <span style="color:#00f5d4;">Karan Singh</span></h1>
+    <h2><span class="typed"></span></h2>
+  </section>
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I am a Computer Science undergraduate passionate about building impactful web applications and solving real-world problems through technology. Skilled in Java, Python, JavaScript, and web frameworks, I have developed projects like a Public API Directory and Sukhi – Student Wellbeing Platform. My goal is to leverage technology to improve everyday experiences and grow as a full-stack developer and researcher.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>🌐 Public APIs Directory</h3>
+        <p>A modern searchable directory of free APIs with filters, animations, and live testing.</p>
+        <a href="#" class="btn">GitHup</a>
+      </div>
+      <div class="card">
+        <h3>📊 Sukhi – Student Wellbeing</h3>
+        <p>A web app with a depression checker, counseling booking, and productivity to-do list.</p>
+        <a href="https://sukhi-9u69.vercel.app" target="_blank" class="btn">Live Project</a>
+      </div>
+      <div class="card">
+        <h3>🖥️ Portfolio Website</h3>
+        <p>This very site with animations, resume embed, and smooth user experience.</p>
+        <a href="#" class="btn">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" data-aos="fade-up" style="text-align:center;">
+    <h2>Resume</h2>
+    
+    <a href="Karan_Singh_Resume.pdf" class="btn" download>Download Resume</a>
+  </section>
+
+  <div id="resumeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <iframe src="Karan_Singh_Resume.pdf"></iframe>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Karan Singh | Portfolio</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    AOS.init();
+    new Typed('.typed', {
+      strings: ["Web Developer", "Problem Solver", "Tech Enthusiast"],
+      typeSpeed: 80, backSpeed: 50, loop: true
+    });
+
+    function openModal(){document.getElementById("resumeModal").style.display="flex";}
+    function closeModal(){document.getElementById("resumeModal").style.display="none";}
+
+    /* Particle.js config */
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value": 80},
+        "color": {"value": "#00f5d4"},
+        "shape": {"type": "circle"},
+        "opacity": {"value": 0.5},
+        "size": {"value": 3},
+        "line_linked": {"enable": true,"distance":120,"color":"#00f5d4","opacity":0.4,"width":1},
+        "move": {"enable": true,"speed":2}
+      }
+    });
+  </script>
+</body>
+</html>
